@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhoShot: {fileID: 0}
-  Force: 10000
+  Force: 7000

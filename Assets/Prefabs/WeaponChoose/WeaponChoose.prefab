@@ -199,7 +199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4488186724198435829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8107274741739485785}
+        m_TargetAssemblyTypeName: ChooseWeaponScript, Assembly-CSharp
+        m_MethodName: WeaponChoosed
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FAMAS
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2638669093034405598
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,10 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777f17f144cd8dc4bbb4665c028aceef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FAMAS: {fileID: 0}
-  AK47: {fileID: 0}
-  UZI: {fileID: 0}
-  Player: {fileID: 0}
+  Player: {fileID: 5849717953144786924, guid: c8db111913673494f85081928caa98df, type: 3}
+  FAMAS: {fileID: 1125116017136886, guid: ef4867bb4ea35d040948c5d75da59462, type: 3}
+  AK47: {fileID: 1415592320102066, guid: 55e187f4ea6f8f6409d32a77be7e0e75, type: 3}
+  UZI: {fileID: 1932159584463208, guid: 8f43c5e24ea129e498a0c1d5e84f7d1e, type: 3}
 --- !u!1 &2794586992501595743
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +506,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4437861975313505193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8107274741739485785}
+        m_TargetAssemblyTypeName: ChooseWeaponScript, Assembly-CSharp
+        m_MethodName: WeaponChoosed
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UZI
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7354132498063183530
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,4 +718,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6524231314012082135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8107274741739485785}
+        m_TargetAssemblyTypeName: ChooseWeaponScript, Assembly-CSharp
+        m_MethodName: WeaponChoosed
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AK-47
+          m_BoolArgument: 0
+        m_CallState: 2
