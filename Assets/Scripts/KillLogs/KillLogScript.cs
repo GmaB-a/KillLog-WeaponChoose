@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class KillLogScript : MonoBehaviour
 {
-    public GameObject TheKiller;
-    public GameObject Killed;
+    public string Killer;
+    public string Killed;
     private float TimeOnDespawn = 5f;
 
     private void Start()
     {
-        gameObject.transform.GetChild(0).GetComponent<Text>().text = TheKiller.name;
-        gameObject.transform.GetChild(2).GetComponent<Text>().text = Killed.name;
-        if (Killed.tag == "BOSS")
+        Text KillerText = gameObject.transform.Find("Killer").GetComponent<Text>();
+        Text MidText = gameObject.transform.Find("MidText").GetComponent<Text>();
+        Text KilledText = gameObject.transform.Find("Killed").GetComponent<Text>();
+        KillerText.text = Killer;
+        KilledText.text = Killed;
+        if (Killed.Contains("BOSS"))
         {
-            gameObject.transform.GetChild(0).GetComponent<Text>().color = Color.red;
-            gameObject.transform.GetChild(2).GetComponent<Text>().color = Color.red;
+            KillerText.color = Color.red;
+            MidText.color = Color.red;
+            KilledText.color = Color.red;
             TimeOnDespawn = 20f;
         }
         if (gameObject.name != "KillLogTemplate")

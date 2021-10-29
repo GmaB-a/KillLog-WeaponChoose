@@ -7,28 +7,19 @@ public class Health : MonoBehaviour
 {
     public int EntityHealth = 100;
 
-    public void ReceiveDamage(int IncomingDamage, GameObject WhoDidDamage)
+    public void ReceiveDamage(int IncomingDamage, GameObject DamageInstigator)
     {
         EntityHealth -= IncomingDamage;
 
         if (EntityHealth <= 0)
         {
-            Die(WhoDidDamage);
+            Die(DamageInstigator.name, gameObject.name);
         }
     }
-
-    public GameObject KillLogPanel;
-    public GameObject KillLogTemplate;
-    private void Die(GameObject Killer)
+   
+    private void Die(string KillerName, string KilledName)
     {
-        GameObject KillLogClone = Instantiate(KillLogTemplate);
-        KillLogClone.name = "KillLogClone";
-        KillLogClone.transform.parent = KillLogPanel.transform;
-        KillLogClone.SetActive(true);
-        KillLogClone.GetComponent<RectTransform>().localScale = KillLogTemplate.GetComponent<RectTransform>().localScale;
-        KillLogScript KillLogCloneScript = KillLogClone.GetComponent<KillLogScript>();
-        KillLogCloneScript.TheKiller = Killer;
-        KillLogCloneScript.Killed = gameObject;
+        KillLogInstigator.GetInstance().InstantiateKillLog(KillerName, KilledName);
         Destroy(gameObject);
     }
 }

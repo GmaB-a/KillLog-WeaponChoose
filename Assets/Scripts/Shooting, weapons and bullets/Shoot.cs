@@ -15,6 +15,6 @@ public class Shoot : MonoBehaviour
     void ShootBullet(Vector3 position)
     {
         GameObject NewBullet = Instantiate(Bullet, position, Quaternion.identity);
-        NewBullet.GetComponent<BulletScript>().WhoShot = gameObject;
+        NewBullet.GetComponent<BulletScript>().ShotInstigator = gameObject;
     }
 }
