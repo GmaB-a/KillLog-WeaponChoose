@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
         if (EntityHealth <= 0)
         {
-            Die(DamageInstigator.name, gameObject.name);
+            Die(DamageInstigator.transform.parent.name, gameObject.name);
         }
     }
    

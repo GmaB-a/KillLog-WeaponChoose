@@ -6,9 +6,14 @@ public class BulletScript : MonoBehaviour
 {
     public GameObject ShotInstigator;
     [SerializeField] private float Force;
+    [SerializeField] private int Damage;
     private void Start()
     {
-        GameObject ShotInstigatorsCamera = ShotInstigator.GetComponentInChildren<MouseLook>().gameObject;
+        Collider ThisCollider = gameObject.GetComponent<Collider>();
+        Physics.IgnoreCollision(ShotInstigator.GetComponent<Collider>(), ThisCollider);
+        Physics.IgnoreCollision(ShotInstigator.transform.parent.GetComponent<Collider>(), ThisCollider);
+        Damage = ShotInstigator.GetComponent<WeaponScript>().ThisWeaponData.Damage;
+        GameObject ShotInstigatorsCamera = Camera.main.gameObject;
 
         Ray ray = new Ray();
         ray.origin = ShotInstigatorsCamera.transform.position;
@@ -22,7 +27,8 @@ public class BulletScript : MonoBehaviour
     {
         if(other.gameObject != ShotInstigator && other.gameObject.GetComponent<Health>() != null)
         {
-            other.gameObject.GetComponent<Health>().ReceiveDamage(10, ShotInstigator);
+            other.gameObject.GetComponent<Health>().ReceiveDamage(Damage, ShotInstigator);
         }
+        Destroy(gameObject);
     }
 }

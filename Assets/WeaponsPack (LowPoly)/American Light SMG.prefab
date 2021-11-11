@@ -253,7 +253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4388016546927840}
   - component: {fileID: 286933848801566438}
-  - component: {fileID: 4586234774462162988}
+  - component: {fileID: 6576009310273589681}
+  - component: {fileID: -6262425261503784337}
   m_Layer: 0
   m_Name: American Light SMG
   m_TagString: Untagged
@@ -291,7 +292,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.57, z: 0.54}
   m_Center: {x: 0, y: -0.09, z: 0.05}
---- !u!114 &4586234774462162988
+--- !u!114 &6576009310273589681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,7 +301,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932159584463208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b572491abd01fc44b851e7c83a4b833, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d74d2586048111419d43e009de15f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 5849717953144786924, guid: c8db111913673494f85081928caa98df, type: 3}
+  ThisWeaponData: {fileID: 11400000, guid: a945cf43bdea7074a9b6e078e5dc841f, type: 2}
+--- !u!114 &-6262425261503784337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932159584463208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f236ba51c33bf54cabbdca9651c92db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 3081788384642322069, guid: a530f4556e420604f9d55f84118f13aa, type: 3}

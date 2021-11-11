@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4513760733219986}
   - component: {fileID: 6902681507367634349}
-  - component: {fileID: 594504684710506761}
+  - component: {fileID: 4623976288688318847}
+  - component: {fileID: 2213770619132915781}
   m_Layer: 0
   m_Name: French AssaultRifle
   m_TagString: Untagged
@@ -50,7 +51,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.29, z: 0.76}
   m_Center: {x: 0, y: -0.04, z: 0.01}
---- !u!114 &594504684710506761
+--- !u!114 &4623976288688318847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,10 +60,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1125116017136886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b572491abd01fc44b851e7c83a4b833, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d74d2586048111419d43e009de15f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 5849717953144786924, guid: c8db111913673494f85081928caa98df, type: 3}
+  ThisWeaponData: {fileID: 11400000, guid: 55aa68afd15d93545a6b15d55ae275de, type: 2}
+--- !u!114 &2213770619132915781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125116017136886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f236ba51c33bf54cabbdca9651c92db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 3081788384642322069, guid: a530f4556e420604f9d55f84118f13aa, type: 3}
 --- !u!1 &1334094071457712
 GameObject:
   m_ObjectHideFlags: 0

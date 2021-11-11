@@ -253,7 +253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4856559645693766}
   - component: {fileID: 6496871342983244587}
-  - component: {fileID: 7278691190384900942}
+  - component: {fileID: 1192386222595048997}
+  - component: {fileID: -5450264422656680625}
   m_Layer: 0
   m_Name: Russian AssaultRifle
   m_TagString: Untagged
@@ -292,7 +293,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.33, z: 1}
   m_Center: {x: 0, y: -0.09, z: 0.09}
---- !u!114 &7278691190384900942
+--- !u!114 &1192386222595048997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,10 +302,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1415592320102066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b572491abd01fc44b851e7c83a4b833, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d74d2586048111419d43e009de15f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 5849717953144786924, guid: c8db111913673494f85081928caa98df, type: 3}
+  ThisWeaponData: {fileID: 11400000, guid: ca30c76076ab2c8458267fb1d4949651, type: 2}
+--- !u!114 &-5450264422656680625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415592320102066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f236ba51c33bf54cabbdca9651c92db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 3081788384642322069, guid: a530f4556e420604f9d55f84118f13aa, type: 3}
 --- !u!1 &1922294430700754
 GameObject:
   m_ObjectHideFlags: 0
