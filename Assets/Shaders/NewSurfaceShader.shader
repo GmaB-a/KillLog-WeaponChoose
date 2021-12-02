@@ -42,7 +42,7 @@ Shader "Terrain/NewSurfaceShader"
         {
             fixed2 uv = IN.uv_MainTex;
             uv.y += sin(uv.x * 3.14f + _Time.y);
-            uv.x += cos(uv.y * 3.14f + _Time.y);
+            uv.x -= cos(uv.y * 3.14f + _Time.y);
             fixed4 c = tex2D (_MainTex, uv) * _Color;
             o.Albedo = fixed3(c.x, c.y, c.z);
             o.Metallic = _Metallic;
