@@ -41,9 +41,9 @@ Shader "Terrain/NewSurfaceShader"
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             fixed2 uv = IN.uv_MainTex;
-            uv.y += sin(uv.x * 6.5f + _Time.y);
+            uv.y += sin(uv.x * 3.14f + _Time.y);
             fixed4 c = tex2D (_MainTex, uv) * _Color;
-            o.Albedo = c.rgb;
+            o.Albedo = fixed3(c.x, c.y, c.z);
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
